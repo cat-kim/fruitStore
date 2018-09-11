@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Fruit Store</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit Store</h1>
+
+<form action='/buyfruit' method='POST'>
+    <table>
+        <tr>
+            <th>
+                Fruit Name:
+            </th>
+            <th>
+                Quantity:
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Lemon
+            </td>
+            <td>
+                <select name='lemon'> 
+                    {% for i in range(11) %}
+                        <option>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Lime
+            </td>
+            <td>
+                <select name='lime'> 
+                    {% for i in range(11) %}
+                        <option>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Orange
+            </td>
+            <td>
+                <select name='orange'> 
+                    {% for i in range(11) %}
+                        <option>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Grapefruit
+            </td>
+            <td>
+                <select name='grapefruit'> 
+                    {% for i in range(11) %}
+                        <option>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+    </table>
+    <p>
+        Your Name:
+        <input type='text' name='name' placeholder='your name here'>
+    </p>
+    <p>
+        Student ID :
+        <input type='text' name='studentid' placeholder='student id here'>
+    </p>
+    <p>
+        <button type ='submit'> Submit </button>
+    </p>
+
+</form>
+</body>
+</html>

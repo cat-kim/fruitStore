@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit Store</title>
+</head>
+<body>
+        <h3>Thank you for your order</h3>
+        <p>we ordered {{session.total}} items for you and charged your student account on {{session.date}}.</p>
+        <h4>You've ordered</h4>
+        <table>
+            <tr>
+                <th>
+                    Fruit Name:
+                </th>
+                <th>
+                    Quantity:
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Lemon
+                </td>
+                <td>
+                    {{session['cart']['lemon']}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lime
+                </td>
+                <td>
+                    {{session.cart.lime}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Orange
+                </td>
+                <td>
+                    {{session.cart.orange}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Grapefruit
+                </td>
+                <td>
+                    {{session.cart.grapefruit}}
+                </td>
+            </tr>
+        </table> 
+        <h4>Your information</h4>
+        <p>Name: {{session.cart.name}}</p>
+        <p>student id: {{session.cart.studentid}}</p>
+        <a href='/'>Go back</a>
+</body>
+</html>
